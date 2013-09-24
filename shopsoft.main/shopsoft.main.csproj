@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5889B8FF-09FE-435D-9F94-26E06B987C92}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>shopsoft.main</RootNamespace>
+    <AssemblyName>shopsoft.main</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>shopsoft.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>shopsoft.main.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.OfficeSkins.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Deployment">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseFormX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Base\BaseFormX.Designer.cs">
+      <DependentUpon>BaseFormX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Base\BaseUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Base\BaseUserControl.Designer.cs">
+      <DependentUpon>BaseUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form02_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form02_Login.Designer.cs">
+      <DependentUpon>Form02_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\Form071_QuickConsume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\Form071_QuickConsume.Designer.cs">
+      <DependentUpon>Form071_QuickConsume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\Form072_TimesConsume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\Form072_TimesConsume.Designer.cs">
+      <DependentUpon>Form072_TimesConsume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\Form079_ConsumeItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\Form079_ConsumeItem.designer.cs">
+      <DependentUpon>Form079_ConsumeItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\Form07_MemberConsume.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\Form07_MemberConsume.Designer.cs">
+      <DependentUpon>Form07_MemberConsume.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\Form091_BonusEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\Form091_BonusEx.Designer.cs">
+      <DependentUpon>Form091_BonusEx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\Form09_BonusExchange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\Form09_BonusExchange.Designer.cs">
+      <DependentUpon>Form09_BonusExchange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\From092_BonusMerger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\From092_BonusMerger.Designer.cs">
+      <DependentUpon>From092_BonusMerger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Form01_mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form01_mainForm.Designer.cs">
+      <DependentUpon>Form01_mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\Form03_MemberAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\Form03_MemberAdd.Designer.cs">
+      <DependentUpon>Form03_MemberAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\Form04_MemberManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\Form04_MemberManage.Designer.cs">
+      <DependentUpon>Form04_MemberManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\Form05_MemberInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\Form05_MemberInfo.Designer.cs">
+      <DependentUpon>Form05_MemberInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\Form06_MemberRecharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\Form06_MemberRecharge.Designer.cs">
+      <DependentUpon>Form06_MemberRecharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\Form061_MoneyRecharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\Form061_MoneyRecharge.Designer.cs">
+      <DependentUpon>Form061_MoneyRecharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberManage\testForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MemberManage\testForm1.Designer.cs">
+      <DependentUpon>testForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Stat\Form21_MemberConsumeStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stat\Form21_MemberConsumeStat.Designer.cs">
+      <DependentUpon>Form21_MemberConsumeStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SearchMembers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\SearchMembers.Designer.cs">
+      <DependentUpon>SearchMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UC211_ConsumeDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC211_ConsumeDetail.Designer.cs">
+      <DependentUpon>UC211_ConsumeDetail.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Base\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Base\BaseFormX.resx">
+      <DependentUpon>BaseFormX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form02_Login.resx">
+      <DependentUpon>Form02_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form01_mainForm.resx">
+      <DependentUpon>Form01_mainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form01_mainForm.zh.resx">
+      <DependentUpon>Form01_mainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage\Form071_QuickConsume.resx">
+      <DependentUpon>Form071_QuickConsume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage\Form072_TimesConsume.resx">
+      <DependentUpon>Form072_TimesConsume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage\Form079_ConsumeItem.resx">
+      <DependentUpon>Form079_ConsumeItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage\Form07_MemberConsume.resx">
+      <DependentUpon>Form07_MemberConsume.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage\Form091_BonusEx.resx">
+      <DependentUpon>Form091_BonusEx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage\Form09_BonusExchange.resx">
+      <DependentUpon>Form09_BonusExchange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage\From092_BonusMerger.resx">
+      <DependentUpon>From092_BonusMerger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="MemberManage\Form03_MemberAdd.resx">
+      <DependentUpon>Form03_MemberAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage\Form04_MemberManage.resx">
+      <DependentUpon>Form04_MemberManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage\Form05_MemberInfo.resx">
+      <DependentUpon>Form05_MemberInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage\Form06_MemberRecharge.resx">
+      <DependentUpon>Form06_MemberRecharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage\Form061_MoneyRecharge.resx">
+      <DependentUpon>Form061_MoneyRecharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberManage\testForm1.resx">
+      <DependentUpon>testForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stat\Form21_MemberConsumeStat.resx">
+      <DependentUpon>Form21_MemberConsumeStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\SearchMembers.resx">
+      <DependentUpon>SearchMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC211_ConsumeDetail.resx">
+      <DependentUpon>UC211_ConsumeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\shopsoft.common\shopsoft.common.csproj">
+      <Project>{8069DBFA-AA6A-493A-9405-401EE0627B1B}</Project>
+      <Name>shopsoft.common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\temp_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\users32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-16-1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-16-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-48-1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop-48-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back128.png" />
+    <None Include="Resources\next128.png" />
+    <None Include="Resources\back64.png" />
+    <None Include="Resources\next64.png" />
+    <Content Include="shopsoft.ico" />
+    <Content Include="注意事项\修改记录.txt" />
+    <Content Include="注意事项\技术点.txt" />
+    <None Include="Resources\add24.png" />
+    <None Include="Resources\configure48.png" />
+    <None Include="Resources\export48.png" />
+    <None Include="Resources\printer48.png" />
+    <None Include="Resources\import48.png" />
+    <None Include="Resources\delete48.png" />
+    <None Include="Resources\coin_add48.png" />
+    <None Include="Resources\money48.png" />
+    <None Include="Resources\money_pig48.png" />
+    <None Include="Resources\coins48.png" />
+    <None Include="Resources\coins24.png" />
+    <None Include="Resources\money64.png" />
+    <Content Include="ConfigFiles\Day.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ConfigFiles\Month.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ConfigFiles\Year.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Clothes.png" />
+    <None Include="Resources\clock_48.png" />
+    <None Include="Resources\consume1_48.png" />
+    <None Include="Resources\consume3_48.png" />
+    <None Include="Resources\consum2_48.png" />
+    <None Include="Resources\add.png" />
+    <None Include="Resources\modify_24.png" />
+    <None Include="Resources\delete_24.png" />
+    <Content Include="Data\sopsoft.mdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SysSet\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

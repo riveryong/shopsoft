@@ -1,0 +1,11 @@
+﻿2012-12-04
+增加了 计次消费 From072
+修改数据库字段：将t_member_deal_history：Leaving_deal_times 由char改为integer
+
+2012-12-10
+增加窗口 积分兑换  Form09
+修改数据库字段：将积分兑换记录Bonus_Exchange_History 的Member_ID改为外键
+
+2012-12-17
+增加窗口 积分兑换金额  Form091
+
