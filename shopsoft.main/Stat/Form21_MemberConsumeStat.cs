@@ -17,6 +17,13 @@ namespace shopsoft.main.Stat
             InitializeComponent();
         }
 
+        private void Form21_MemberConsumeStat_Load(object sender, EventArgs e)
+        {
+            uC211_ConsumeDetail1.dbsession = this.DBSession;
+        }
+
+
+
 
     }
 }

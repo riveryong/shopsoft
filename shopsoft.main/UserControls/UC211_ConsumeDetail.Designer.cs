@@ -91,13 +91,13 @@
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Margin = new System.Windows.Forms.Padding(0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(980, 100);
+            this.panelControl1.Size = new System.Drawing.Size(975, 117);
             this.panelControl1.TabIndex = 0;
             // 
             // dateEnd
             // 
             this.dateEnd.EditValue = null;
-            this.dateEnd.Location = new System.Drawing.Point(368, 20);
+            this.dateEnd.Location = new System.Drawing.Point(429, 23);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.dateEnd.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,13 +108,13 @@
             this.dateEnd.Properties.VistaEditTime = DevExpress.Utils.DefaultBoolean.False;
             this.dateEnd.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateEnd.Size = new System.Drawing.Size(100, 23);
+            this.dateEnd.Size = new System.Drawing.Size(117, 23);
             this.dateEnd.TabIndex = 17;
             // 
             // dateStart
             // 
             this.dateStart.EditValue = null;
-            this.dateStart.Location = new System.Drawing.Point(238, 20);
+            this.dateStart.Location = new System.Drawing.Point(278, 23);
             this.dateStart.Name = "dateStart";
             this.dateStart.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.dateStart.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,25 +126,25 @@
             this.dateStart.Properties.VistaEditTime = DevExpress.Utils.DefaultBoolean.False;
             this.dateStart.Properties.VistaTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton()});
-            this.dateStart.Size = new System.Drawing.Size(100, 23);
+            this.dateStart.Size = new System.Drawing.Size(117, 23);
             this.dateStart.TabIndex = 17;
             // 
             // txtMemberNo
             // 
-            this.txtMemberNo.Location = new System.Drawing.Point(409, 60);
-            this.txtMemberNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMemberNo.Location = new System.Drawing.Point(430, 69);
+            this.txtMemberNo.Margin = new System.Windows.Forms.Padding(5);
             this.txtMemberNo.Name = "txtMemberNo";
             this.txtMemberNo.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.txtMemberNo.Properties.Appearance.Options.UseFont = true;
             this.txtMemberNo.Properties.MaxLength = 30;
-            this.txtMemberNo.Size = new System.Drawing.Size(231, 28);
+            this.txtMemberNo.Size = new System.Drawing.Size(269, 28);
             this.txtMemberNo.TabIndex = 15;
             // 
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.labelControl1.Location = new System.Drawing.Point(285, 63);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl1.Location = new System.Drawing.Point(286, 72);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(116, 21);
             this.labelControl1.TabIndex = 14;
@@ -155,10 +155,10 @@
             this.btnSearch.Appearance.Font = new System.Drawing.Font("微软雅黑", 14F);
             this.btnSearch.Appearance.Options.UseFont = true;
             this.btnSearch.Cursor = System.Windows.Forms.Cursors.Default;
-            this.btnSearch.Location = new System.Drawing.Point(648, 56);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Location = new System.Drawing.Point(709, 63);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(5);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(90, 40);
+            this.btnSearch.Size = new System.Drawing.Size(105, 47);
             this.btnSearch.TabIndex = 16;
             this.btnSearch.Text = "查询(F3)";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -170,12 +170,12 @@
             this.btnPrint.Appearance.Options.UseBackColor = true;
             this.btnPrint.Appearance.Options.UseFont = true;
             this.btnPrint.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.btnPrint.Image = global::shopsoft.main.Properties.Resources.printer48;
-            this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnPrint.Location = new System.Drawing.Point(798, 0);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnPrint.Image = global::shopsoft.main.Properties.Resources.printer24;
+            this.btnPrint.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnPrint.Location = new System.Drawing.Point(825, 5);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(5, 5, 0, 5);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(80, 80);
+            this.btnPrint.Size = new System.Drawing.Size(70, 35);
             this.btnPrint.TabIndex = 5;
             this.btnPrint.Text = "打印";
             // 
@@ -186,20 +186,20 @@
             this.btnMemberImport.Appearance.Options.UseBackColor = true;
             this.btnMemberImport.Appearance.Options.UseFont = true;
             this.btnMemberImport.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
-            this.btnMemberImport.Image = global::shopsoft.main.Properties.Resources.export48;
-            this.btnMemberImport.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnMemberImport.Location = new System.Drawing.Point(886, 0);
-            this.btnMemberImport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.btnMemberImport.Image = global::shopsoft.main.Properties.Resources.export24;
+            this.btnMemberImport.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
+            this.btnMemberImport.Location = new System.Drawing.Point(900, 5);
+            this.btnMemberImport.Margin = new System.Windows.Forms.Padding(5);
             this.btnMemberImport.Name = "btnMemberImport";
-            this.btnMemberImport.Size = new System.Drawing.Size(80, 80);
+            this.btnMemberImport.Size = new System.Drawing.Size(70, 35);
             this.btnMemberImport.TabIndex = 6;
             this.btnMemberImport.Text = "导出";
             // 
             // labelControl3
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.labelControl3.Location = new System.Drawing.Point(345, 18);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl3.Location = new System.Drawing.Point(402, 21);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(16, 21);
             this.labelControl3.TabIndex = 1;
@@ -208,8 +208,8 @@
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.labelControl2.Location = new System.Drawing.Point(32, 20);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4);
+            this.labelControl2.Location = new System.Drawing.Point(37, 23);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(5);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(52, 21);
             this.labelControl2.TabIndex = 1;
@@ -218,8 +218,8 @@
             // lblMemberGrade
             // 
             this.lblMemberGrade.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.lblMemberGrade.Location = new System.Drawing.Point(16, 62);
-            this.lblMemberGrade.Margin = new System.Windows.Forms.Padding(4);
+            this.lblMemberGrade.Location = new System.Drawing.Point(19, 72);
+            this.lblMemberGrade.Margin = new System.Windows.Forms.Padding(5);
             this.lblMemberGrade.Name = "lblMemberGrade";
             this.lblMemberGrade.Size = new System.Drawing.Size(68, 21);
             this.lblMemberGrade.TabIndex = 1;
@@ -227,7 +227,8 @@
             // 
             // cmbTime
             // 
-            this.cmbTime.Location = new System.Drawing.Point(91, 17);
+            this.cmbTime.EditValue = "今天";
+            this.cmbTime.Location = new System.Drawing.Point(106, 20);
             this.cmbTime.Name = "cmbTime";
             this.cmbTime.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTime.Properties.Appearance.Options.UseFont = true;
@@ -235,17 +236,18 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cmbTime.Properties.Items.AddRange(new object[] {
             "今天",
-            "三天",
-            "七天",
-            "一个月",
+            "昨天",
+            "3天内",
+            "7天内",
+            "30天内",
             "指定时间"});
-            this.cmbTime.Size = new System.Drawing.Size(131, 28);
+            this.cmbTime.Size = new System.Drawing.Size(153, 28);
             this.cmbTime.TabIndex = 0;
             this.cmbTime.SelectedIndexChanged += new System.EventHandler(this.cmbTime_SelectedIndexChanged);
             // 
             // cmbConsumeType
             // 
-            this.cmbConsumeType.Location = new System.Drawing.Point(91, 59);
+            this.cmbConsumeType.Location = new System.Drawing.Point(106, 69);
             this.cmbConsumeType.Name = "cmbConsumeType";
             this.cmbConsumeType.Properties.Appearance.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbConsumeType.Properties.Appearance.Options.UseFont = true;
@@ -255,18 +257,18 @@
             "全部",
             "快速消费",
             "计次消费"});
-            this.cmbConsumeType.Size = new System.Drawing.Size(131, 28);
+            this.cmbConsumeType.Size = new System.Drawing.Size(153, 28);
             this.cmbConsumeType.TabIndex = 0;
             // 
             // gridCtrlConsume
             // 
             this.gridCtrlConsume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gridCtrlConsume.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridCtrlConsume.Location = new System.Drawing.Point(0, 100);
+            this.gridCtrlConsume.Location = new System.Drawing.Point(0, 117);
             this.gridCtrlConsume.MainView = this.gridViewMembers;
             this.gridCtrlConsume.Margin = new System.Windows.Forms.Padding(0);
             this.gridCtrlConsume.Name = "gridCtrlConsume";
-            this.gridCtrlConsume.Size = new System.Drawing.Size(980, 400);
+            this.gridCtrlConsume.Size = new System.Drawing.Size(975, 466);
             this.gridCtrlConsume.TabIndex = 2;
             this.gridCtrlConsume.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMembers});
@@ -574,13 +576,13 @@
             // 
             // UC211_ConsumeDetail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridCtrlConsume);
             this.Controls.Add(this.panelControl1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "UC211_ConsumeDetail";
-            this.Size = new System.Drawing.Size(980, 500);
+            this.Size = new System.Drawing.Size(975, 583);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
