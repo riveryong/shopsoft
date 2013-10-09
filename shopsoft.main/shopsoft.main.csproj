@@ -71,6 +71,9 @@
     <Reference Include="DevExpress.Data.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
+    <Reference Include="DevExpress.Localization.v11.1">
+      <HintPath>..\..\..\DevelopTools\Devexpress\DevExpress.Localization.v11.1.6\DevExpress.Localization.v11.1.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.OfficeSkins.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
@@ -400,6 +403,8 @@
     <None Include="Resources\next128.png" />
     <None Include="Resources\back64.png" />
     <None Include="Resources\next64.png" />
+    <None Include="Resources\printer24.png" />
+    <None Include="Resources\export24.png" />
     <Content Include="shopsoft.ico" />
     <Content Include="注意事项\修改记录.txt" />
     <Content Include="注意事项\技术点.txt" />

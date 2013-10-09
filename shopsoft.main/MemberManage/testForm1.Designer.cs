@@ -37,6 +37,9 @@
             this.popupControlContainer1 = new DevExpress.XtraBars.PopupControlContainer(this.components);
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.controlNavigator1 = new DevExpress.XtraEditors.ControlNavigator();
             ((System.ComponentModel.ISupportInitialize)(this.DBSession)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
@@ -47,12 +50,14 @@
             this.popupControlContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateEdit1
             // 
             this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(218, 326);
+            this.dateEdit1.Location = new System.Drawing.Point(203, 12);
             this.dateEdit1.Name = "dateEdit1";
             this.dateEdit1.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -67,16 +72,17 @@
             // 
             // comboBoxEdit1
             // 
-            this.comboBoxEdit1.Location = new System.Drawing.Point(31, 368);
+            this.comboBoxEdit1.Location = new System.Drawing.Point(16, 45);
             this.comboBoxEdit1.Name = "comboBoxEdit1";
             this.comboBoxEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.comboBoxEdit1.Size = new System.Drawing.Size(117, 21);
             this.comboBoxEdit1.TabIndex = 1;
+            this.comboBoxEdit1.SelectedIndexChanged += new System.EventHandler(this.comboBoxEdit1_SelectedIndexChanged);
             // 
             // textEdit1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(31, 326);
+            this.textEdit1.Location = new System.Drawing.Point(16, 12);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Size = new System.Drawing.Size(117, 21);
             this.textEdit1.TabIndex = 2;
@@ -115,7 +121,7 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(218, 371);
+            this.simpleButton1.Location = new System.Drawing.Point(203, 48);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(127, 27);
             this.simpleButton1.TabIndex = 6;
@@ -125,23 +131,51 @@
             // panelControl1
             // 
             this.panelControl1.Controls.Add(this.dropDownButton1);
+            this.panelControl1.Controls.Add(this.simpleButton1);
+            this.panelControl1.Controls.Add(this.comboBoxEdit1);
             this.panelControl1.Controls.Add(this.popupControlContainer1);
+            this.panelControl1.Controls.Add(this.textEdit1);
+            this.panelControl1.Controls.Add(this.dateEdit1);
             this.panelControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(922, 111);
             this.panelControl1.TabIndex = 7;
             // 
+            // gridControl1
+            // 
+            this.gridControl1.Location = new System.Drawing.Point(0, 117);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(642, 299);
+            this.gridControl1.TabIndex = 8;
+            this.gridControl1.UseEmbeddedNavigator = true;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            // 
+            // gridView1
+            // 
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
+            // 
+            // controlNavigator1
+            // 
+            this.controlNavigator1.Location = new System.Drawing.Point(0, 423);
+            this.controlNavigator1.Name = "controlNavigator1";
+            this.controlNavigator1.ShowToolTips = true;
+            this.controlNavigator1.Size = new System.Drawing.Size(220, 24);
+            this.controlNavigator1.TabIndex = 9;
+            this.controlNavigator1.Text = "controlNavigator1";
+            this.controlNavigator1.TextStringFormat = "{0} / {1}";
+            // 
             // testForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(922, 486);
+            this.Controls.Add(this.controlNavigator1);
+            this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.panelControl1);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.textEdit1);
-            this.Controls.Add(this.comboBoxEdit1);
-            this.Controls.Add(this.dateEdit1);
             this.LookAndFeel.SkinName = "Office 2010 Blue";
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -158,6 +192,8 @@
             this.popupControlContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -172,6 +208,9 @@
         private DevExpress.XtraBars.PopupControlContainer popupControlContainer1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private DevExpress.XtraEditors.PanelControl panelControl1;
+        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraEditors.ControlNavigator controlNavigator1;
 
     }
 }

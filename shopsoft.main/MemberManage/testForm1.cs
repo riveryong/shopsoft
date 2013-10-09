@@ -22,5 +22,10 @@ namespace shopsoft.main.MemberManage
         {
             popupControlContainer1.Show();
         }
+
+        private void comboBoxEdit1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
