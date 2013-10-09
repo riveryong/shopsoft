@@ -11,7 +11,7 @@ using DevExpress.XtraEditors;
 
 namespace shopsoft.main.Base
 {
-    public partial class BaseUserControl : UserControl
+    public partial class BaseUserControl : XtraUserControl
     {
         /// <summary>
         /// 消息类型：错误

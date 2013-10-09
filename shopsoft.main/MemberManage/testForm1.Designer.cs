@@ -40,7 +40,6 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.controlNavigator1 = new DevExpress.XtraEditors.ControlNavigator();
-            ((System.ComponentModel.ISupportInitialize)(this.DBSession)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).BeginInit();
@@ -144,10 +143,23 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.EmbeddedNavigator.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.gridControl1.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridControl1.EmbeddedNavigator.Appearance.Options.UseBackColor = true;
+            this.gridControl1.EmbeddedNavigator.Appearance.Options.UseFont = true;
+            this.gridControl1.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.Next.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.Prev.Visible = false;
+            this.gridControl1.EmbeddedNavigator.Buttons.Remove.Visible = false;
+            this.gridControl1.EmbeddedNavigator.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.gridControl1.EmbeddedNavigator.CausesValidation = false;
             this.gridControl1.Location = new System.Drawing.Point(0, 117);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(642, 299);
+            this.gridControl1.Size = new System.Drawing.Size(722, 299);
             this.gridControl1.TabIndex = 8;
             this.gridControl1.UseEmbeddedNavigator = true;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -160,10 +172,15 @@
             // 
             // controlNavigator1
             // 
-            this.controlNavigator1.Location = new System.Drawing.Point(0, 423);
+            this.controlNavigator1.Buttons.Append.Visible = false;
+            this.controlNavigator1.Buttons.Next.Visible = false;
+            this.controlNavigator1.Buttons.Prev.Visible = false;
+            this.controlNavigator1.Buttons.Remove.Visible = false;
+            this.controlNavigator1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat;
+            this.controlNavigator1.Location = new System.Drawing.Point(0, 422);
             this.controlNavigator1.Name = "controlNavigator1";
             this.controlNavigator1.ShowToolTips = true;
-            this.controlNavigator1.Size = new System.Drawing.Size(220, 24);
+            this.controlNavigator1.Size = new System.Drawing.Size(320, 31);
             this.controlNavigator1.TabIndex = 9;
             this.controlNavigator1.Text = "controlNavigator1";
             this.controlNavigator1.TextStringFormat = "{0} / {1}";
@@ -182,7 +199,6 @@
             this.Name = "testForm1";
             this.ShowIcon = false;
             this.Text = "s";
-            ((System.ComponentModel.ISupportInitialize)(this.DBSession)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.VistaTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.comboBoxEdit1.Properties)).EndInit();

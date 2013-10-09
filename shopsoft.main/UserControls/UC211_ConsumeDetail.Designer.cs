@@ -188,7 +188,7 @@
             this.btnMemberImport.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.btnMemberImport.Image = global::shopsoft.main.Properties.Resources.export24;
             this.btnMemberImport.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft;
-            this.btnMemberImport.Location = new System.Drawing.Point(900, 5);
+            this.btnMemberImport.Location = new System.Drawing.Point(899, 5);
             this.btnMemberImport.Margin = new System.Windows.Forms.Padding(5);
             this.btnMemberImport.Name = "btnMemberImport";
             this.btnMemberImport.Size = new System.Drawing.Size(70, 35);
@@ -264,12 +264,25 @@
             // 
             this.gridCtrlConsume.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.gridCtrlConsume.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridCtrlConsume.EmbeddedNavigator.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridCtrlConsume.EmbeddedNavigator.Appearance.Options.UseFont = true;
+            this.gridCtrlConsume.EmbeddedNavigator.Buttons.Append.Visible = false;
+            this.gridCtrlConsume.EmbeddedNavigator.Buttons.CancelEdit.Visible = false;
+            this.gridCtrlConsume.EmbeddedNavigator.Buttons.Edit.Visible = false;
+            this.gridCtrlConsume.EmbeddedNavigator.Buttons.EndEdit.Visible = false;
+            this.gridCtrlConsume.EmbeddedNavigator.Buttons.Next.Visible = false;
+            this.gridCtrlConsume.EmbeddedNavigator.Buttons.Prev.Visible = false;
+            this.gridCtrlConsume.EmbeddedNavigator.Buttons.Remove.Visible = false;
+            this.gridCtrlConsume.EmbeddedNavigator.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
+            this.gridCtrlConsume.EmbeddedNavigator.CausesValidation = false;
+            this.gridCtrlConsume.EmbeddedNavigator.TextLocation = DevExpress.XtraEditors.NavigatorButtonsTextLocation.End;
             this.gridCtrlConsume.Location = new System.Drawing.Point(0, 117);
             this.gridCtrlConsume.MainView = this.gridViewMembers;
             this.gridCtrlConsume.Margin = new System.Windows.Forms.Padding(0);
             this.gridCtrlConsume.Name = "gridCtrlConsume";
             this.gridCtrlConsume.Size = new System.Drawing.Size(975, 466);
             this.gridCtrlConsume.TabIndex = 2;
+            this.gridCtrlConsume.UseEmbeddedNavigator = true;
             this.gridCtrlConsume.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridViewMembers});
             // 
@@ -375,7 +388,7 @@
             // 
             this.YingShouMoney.AppearanceHeader.Options.UseTextOptions = true;
             this.YingShouMoney.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.YingShouMoney.Caption = "消费合计";
+            this.YingShouMoney.Caption = "消费金额";
             this.YingShouMoney.FieldName = "YingShou_Money";
             this.YingShouMoney.MaxWidth = 80;
             this.YingShouMoney.Name = "YingShouMoney";

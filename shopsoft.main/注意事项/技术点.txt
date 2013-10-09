@@ -1,2 +1,5 @@
 ﻿2012-12-05
 页面上显示的字体，会员信息Title使用“微软雅黑 12pt（小四）”，内容：“微软雅黑 11.25pt(五号)”
+2013-10-09
+BaseForm、BaseUserControl都要继承Xtra。。。开头的控件，这样，就不会变形了
+尤其是UserControl，如果没继承XtraUserControl就会导致，在引用这个usercontrol的地方，实际显示时变形
