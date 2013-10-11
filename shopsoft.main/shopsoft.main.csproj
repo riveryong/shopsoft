@@ -253,6 +253,12 @@
     <Compile Include="UserControls\UC211_ConsumeDetail.Designer.cs">
       <DependentUpon>UC211_ConsumeDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UC212_ConsumeRank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UC212_ConsumeRank.Designer.cs">
+      <DependentUpon>UC212_ConsumeRank.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Base\BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -333,6 +339,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UC211_ConsumeDetail.resx">
       <DependentUpon>UC211_ConsumeDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UC212_ConsumeRank.resx">
+      <DependentUpon>UC212_ConsumeRank.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config">
       <SubType>Designer</SubType>

@@ -275,7 +275,6 @@
             this.gridCtrlConsume.EmbeddedNavigator.Buttons.Remove.Visible = false;
             this.gridCtrlConsume.EmbeddedNavigator.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.UltraFlat;
             this.gridCtrlConsume.EmbeddedNavigator.CausesValidation = false;
-            this.gridCtrlConsume.EmbeddedNavigator.TextLocation = DevExpress.XtraEditors.NavigatorButtonsTextLocation.End;
             this.gridCtrlConsume.Location = new System.Drawing.Point(0, 117);
             this.gridCtrlConsume.MainView = this.gridViewMembers;
             this.gridCtrlConsume.Margin = new System.Windows.Forms.Padding(0);

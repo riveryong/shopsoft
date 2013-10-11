@@ -5,6 +5,7 @@ using System.Text;
 using shopsoft.common.DB;
 using DevExpress.Data.Filtering;
 using DevExpress.Xpo;
+using System.Data;
 
 namespace shopsoft.common.Logic
 {
@@ -37,6 +38,7 @@ namespace shopsoft.common.Logic
 
         #endregion
 
+        #region 根据条件查询会员消费记录
         /// <summary>
         /// 根据条件查询会员消费记录
         /// </summary>
@@ -47,41 +49,30 @@ namespace shopsoft.common.Logic
         /// <returns></returns>
         public XPCollection<t_Member_Deal_History> SearchDealHistoryList(string memberId, int consumeType, DateTime timeStart, DateTime timeEnd)
         {
-            string strSql = string.Empty;
+            string strSql = "1=1";
             // 查询条件
             // 会员编号/姓名/手机号
             if (!string.IsNullOrEmpty(memberId))
             {
-                strSql = String.Format("(Member_No like '%{0}%' OR Member_Name like '%{0}%') ", memberId);
+                strSql = String.Format(" And (Member_No like '%{0}%' OR Member_Name like '%{0}%') ", memberId);
             }
 
             // 会员等级
             if (consumeType >= 0)
             {
-                if (!string.IsNullOrEmpty(strSql))
-                {
-                    strSql += " And ";
-                }
-                strSql += String.Format("Member_Grade_ID = '{0}'", consumeType);
+
+                strSql += String.Format(" And Member_Grade_ID = '{0}' ", consumeType);
             }
 
             // 消费时间
             if (null != timeStart && DateTime.MinValue != timeStart)
             {
-                if (!string.IsNullOrEmpty(strSql))
-                {
-                    strSql += " And ";
-                }
-                strSql += string.Format("Deal_DateTime  >= '{0}'", timeStart); 
+                strSql += string.Format(" And Deal_DateTime  >= '{0}' ", timeStart); 
             }
 
             if (null != timeEnd && DateTime.MinValue != timeEnd)
             {
-                if (!string.IsNullOrEmpty(strSql))
-                {
-                    strSql += " And ";
-                }
-                strSql += string.Format("Deal_DateTime  <= '{0}'", timeEnd);
+                strSql += string.Format(" And Deal_DateTime  <= '{0}' ", timeEnd);
             }
 
             if (!string.IsNullOrEmpty(strSql))
@@ -94,5 +85,47 @@ namespace shopsoft.common.Logic
             return collection;
 
         }
+        #endregion
+
+        #region 根据条件统计会员消费
+        /// <summary>
+        /// 根据条件统计会员消费数据
+        /// </summary>
+        /// <param name="memberId">会员编号或会员姓名</param>
+        /// <param name="timeStart">统计时间开始</param>
+        /// <param name="timeEnd">统计时间结束</param>
+        /// <returns></returns>
+        public DataTable statDealHistory(string memberId, DateTime timeStart, DateTime timeEnd)
+        {
+            DataTable res = null;
+            // 分类汇总sql语句
+            /*SELECT Member_ID, Member_No, 
+               SUM(ShouDao_cash) AS sumDealCash,
+               SUM(KouChu_Deal_Time) AS sumDealTime, 
+               SUM(Get_Bonus) AS sumBonus, 
+               count(*) AS sumDeal
+                FROM t_Member_Deal_History
+                WHERE Member_No like '%1% '
+                GROUP BY Member_ID, Member_No
+                ORDER BY SUM(ShouDao_cash);*/
+            string strSql = "SELECT Member_ID, Member_No, ";
+                   strSql += "SUM(ShouDao_cash) AS sumDealCash,";
+                   strSql += "SUM(KouChu_Deal_Time) AS sumDealTime,";
+                   strSql += "SUM(Get_Bonus) AS sumBonus,";
+                   strSql += "count(*) AS sumDeal";
+                   strSql += "";
+
+               
+                
+               
+
+
+
+
+            return res;
+
+        }
+
+        #endregion
     }
 }
