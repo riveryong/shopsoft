@@ -71,8 +71,9 @@
     <Reference Include="DevExpress.Data.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Localization.v11.1">
-      <HintPath>..\..\..\DevelopTools\Devexpress\DevExpress.Localization.v11.1.6\DevExpress.Localization.v11.1.dll</HintPath>
+    <Reference Include="DevExpress.Localization.v11.1, Version=11.1.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\DevExpress.Localization.v11.1.dll</HintPath>
     </Reference>
     <Reference Include="DevExpress.OfficeSkins.v11.1, Version=11.1.6.0, Culture=neutral, PublicKeyToken=95fc6c5621878f0a, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -302,6 +303,7 @@
     <EmbeddedResource Include="MemberManage\From092_BonusMerger.resx">
       <DependentUpon>From092_BonusMerger.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -413,6 +415,7 @@
     <None Include="Resources\next64.png" />
     <None Include="Resources\printer24.png" />
     <None Include="Resources\export24.png" />
+    <Content Include="lib\DevExpress.Localization.v11.1.dll" />
     <Content Include="shopsoft.ico" />
     <Content Include="注意事项\修改记录.txt" />
     <Content Include="注意事项\技术点.txt" />
