@@ -109,16 +109,13 @@ namespace shopsoft.common.Logic
                 GROUP BY Member_ID, Member_No
                 ORDER BY SUM(ShouDao_cash);*/
             string strSql = "SELECT Member_ID, Member_No, ";
-                   strSql += "SUM(ShouDao_cash) AS sumDealCash,";
-                   strSql += "SUM(KouChu_Deal_Time) AS sumDealTime,";
-                   strSql += "SUM(Get_Bonus) AS sumBonus,";
-                   strSql += "count(*) AS sumDeal";
-                   strSql += "";
-
-               
-                
-               
-
+                   strSql += " SUM(ShouDao_cash) AS sumDealCash,";
+                   strSql += " SUM(KouChu_Deal_Time) AS sumDealTime,";
+                   strSql += " SUM(Get_Bonus) AS sumBonus,";
+                   strSql += " count(*) AS sumDeal";
+                   strSql += "FORM t_Member_Deal_Hisory";
+                   strSql += String.Format("WHERE Member_No like '%{0}% '", memberId);
+                   strSql += " GROUP BY Member_ID, Member_No  ORDER BY SUM(ShouDao_cash);";
 
 
 
