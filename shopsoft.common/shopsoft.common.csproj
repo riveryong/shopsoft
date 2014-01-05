@@ -63,6 +63,7 @@
     <Compile Include="SysParam.cs" />
     <Compile Include="util\BusinessUtil.cs" />
     <Compile Include="util\ComboBoxEx.cs" />
+    <Compile Include="util\ConfigFileUtil.cs" />
     <Compile Include="util\FormUtil.cs" />
   </ItemGroup>
   <ItemGroup />
