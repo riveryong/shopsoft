@@ -10,6 +10,7 @@ using System.Xml;
 using shopsoft.common;
 using System.IO;
 using shopsoft.common.Const;
+using shopsoft.main.Stat;
 
 
 
@@ -225,6 +226,25 @@ namespace shopsoft.main
         private void btnProductStat_ItemClick(object sender, ItemClickEventArgs e)
         {
 
+        }
+        #endregion
+
+
+        #region 会员消费统计
+        private void btnMemberConusmeStat_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form21_MemberConsumeStat from21 = checkFormIsOpened("Form21_MemberConsumeStat") as Form21_MemberConsumeStat;
+
+            if (from21 == null)
+            {
+                from21 = new Form21_MemberConsumeStat();
+
+            }
+
+            this.mainPanel.Controls.Clear();
+            from21.Dock = DockStyle.Fill;
+            this.mainPanel.Controls.Add(from21);
+            from21.Show();
         }
         #endregion
 

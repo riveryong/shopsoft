@@ -45,19 +45,10 @@
             this.gridViewRank = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.MemberNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.MemberName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.DealDateTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.YingShouMoney = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.YouHuiMoney = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ShiShouCash = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.ShouDaocash = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.LooseCharge = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.KouChuCardBalance = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.LeaveBalance = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.KouChuDealTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.LeaveDealTime = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.GetBonus = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.PayType = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Comment = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sumDeal = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sumDealCash = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sumDealTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.sumBonus = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Member_ID = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
@@ -291,19 +282,10 @@
             this.gridViewRank.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MemberNo,
             this.MemberName,
-            this.DealDateTime,
-            this.YingShouMoney,
-            this.YouHuiMoney,
-            this.ShiShouCash,
-            this.ShouDaocash,
-            this.LooseCharge,
-            this.KouChuCardBalance,
-            this.LeaveBalance,
-            this.KouChuDealTime,
-            this.LeaveDealTime,
-            this.GetBonus,
-            this.PayType,
-            this.Comment,
+            this.sumDealCash,
+            this.sumDealTime,
+            this.sumBonus,
+            this.sumDeal,
             this.Member_ID});
             this.gridViewRank.GridControl = this.gridCtrlConsumeRank;
             this.gridViewRank.Name = "gridViewRank";
@@ -334,7 +316,7 @@
             this.MemberNo.AppearanceHeader.Options.UseTextOptions = true;
             this.MemberNo.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.MemberNo.Caption = "会员编号";
-            this.MemberNo.FieldName = "Member_ID.Member_No";
+            this.MemberNo.FieldName = "Member_No";
             this.MemberNo.MaxWidth = 200;
             this.MemberNo.Name = "MemberNo";
             this.MemberNo.OptionsColumn.AllowEdit = false;
@@ -344,7 +326,7 @@
             this.MemberNo.OptionsFilter.AllowAutoFilter = false;
             this.MemberNo.OptionsFilter.AllowFilter = false;
             this.MemberNo.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
-            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Member_ID.Member_No", "记录数：{0:n0}")});
+            new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Count, "Member_No", "记录数：{0:n0}")});
             this.MemberNo.Visible = true;
             this.MemberNo.VisibleIndex = 0;
             this.MemberNo.Width = 100;
@@ -354,7 +336,7 @@
             this.MemberName.AppearanceHeader.Options.UseTextOptions = true;
             this.MemberName.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.MemberName.Caption = "姓名";
-            this.MemberName.FieldName = "Member_ID.Member_Name";
+            this.MemberName.FieldName = "Member_Name";
             this.MemberName.MaxWidth = 75;
             this.MemberName.Name = "MemberName";
             this.MemberName.OptionsColumn.AllowEdit = false;
@@ -367,218 +349,75 @@
             this.MemberName.VisibleIndex = 1;
             this.MemberName.Width = 73;
             // 
-            // DealDateTime
+            // sumDeal
             // 
-            this.DealDateTime.AppearanceHeader.Options.UseTextOptions = true;
-            this.DealDateTime.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.DealDateTime.Caption = "消费时间";
-            this.DealDateTime.FieldName = "Deal_DateTime";
-            this.DealDateTime.Name = "DealDateTime";
-            this.DealDateTime.OptionsColumn.AllowEdit = false;
-            this.DealDateTime.OptionsColumn.AllowFocus = false;
-            this.DealDateTime.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.DealDateTime.OptionsColumn.FixedWidth = true;
-            this.DealDateTime.OptionsFilter.AllowAutoFilter = false;
-            this.DealDateTime.OptionsFilter.AllowFilter = false;
-            this.DealDateTime.Visible = true;
-            this.DealDateTime.VisibleIndex = 2;
+            this.sumDeal.AppearanceHeader.Options.UseTextOptions = true;
+            this.sumDeal.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.sumDeal.Caption = "消费频率(次）";
+            this.sumDeal.FieldName = "sumDeal";
+            this.sumDeal.Name = "sumDeal";
+            this.sumDeal.OptionsColumn.AllowEdit = false;
+            this.sumDeal.OptionsColumn.AllowFocus = false;
+            this.sumDeal.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.sumDeal.OptionsColumn.FixedWidth = true;
+            this.sumDeal.OptionsFilter.AllowAutoFilter = false;
+            this.sumDeal.OptionsFilter.AllowFilter = false;
+            this.sumDeal.Visible = true;
+            this.sumDeal.VisibleIndex = 5;
+            this.sumDeal.Width = 90;
             // 
-            // YingShouMoney
+            // sumDealCash
             // 
-            this.YingShouMoney.AppearanceHeader.Options.UseTextOptions = true;
-            this.YingShouMoney.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.YingShouMoney.Caption = "消费金额";
-            this.YingShouMoney.FieldName = "YingShou_Money";
-            this.YingShouMoney.MaxWidth = 80;
-            this.YingShouMoney.Name = "YingShouMoney";
-            this.YingShouMoney.OptionsColumn.AllowEdit = false;
-            this.YingShouMoney.OptionsColumn.AllowFocus = false;
-            this.YingShouMoney.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.YingShouMoney.OptionsColumn.FixedWidth = true;
-            this.YingShouMoney.OptionsFilter.AllowAutoFilter = false;
-            this.YingShouMoney.OptionsFilter.AllowFilter = false;
-            this.YingShouMoney.Visible = true;
-            this.YingShouMoney.VisibleIndex = 3;
-            this.YingShouMoney.Width = 70;
+            this.sumDealCash.AppearanceHeader.Options.UseTextOptions = true;
+            this.sumDealCash.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.sumDealCash.Caption = "消费总金额";
+            this.sumDealCash.FieldName = "sumDealCash";
+            this.sumDealCash.MaxWidth = 80;
+            this.sumDealCash.Name = "sumDealCash";
+            this.sumDealCash.OptionsColumn.AllowEdit = false;
+            this.sumDealCash.OptionsColumn.AllowFocus = false;
+            this.sumDealCash.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.sumDealCash.OptionsColumn.FixedWidth = true;
+            this.sumDealCash.OptionsFilter.AllowAutoFilter = false;
+            this.sumDealCash.OptionsFilter.AllowFilter = false;
+            this.sumDealCash.Visible = true;
+            this.sumDealCash.VisibleIndex = 2;
+            this.sumDealCash.Width = 70;
             // 
-            // YouHuiMoney
+            // sumDealTime
             // 
-            this.YouHuiMoney.AppearanceHeader.Options.UseTextOptions = true;
-            this.YouHuiMoney.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.YouHuiMoney.Caption = "优惠";
-            this.YouHuiMoney.FieldName = "YouHui_Money";
-            this.YouHuiMoney.Name = "YouHuiMoney";
-            this.YouHuiMoney.OptionsColumn.AllowEdit = false;
-            this.YouHuiMoney.OptionsColumn.AllowFocus = false;
-            this.YouHuiMoney.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.YouHuiMoney.OptionsColumn.FixedWidth = true;
-            this.YouHuiMoney.OptionsFilter.AllowAutoFilter = false;
-            this.YouHuiMoney.OptionsFilter.AllowFilter = false;
-            this.YouHuiMoney.Visible = true;
-            this.YouHuiMoney.VisibleIndex = 4;
-            this.YouHuiMoney.Width = 70;
+            this.sumDealTime.AppearanceHeader.Options.UseTextOptions = true;
+            this.sumDealTime.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.sumDealTime.Caption = "消费总次数";
+            this.sumDealTime.FieldName = "sumDealTime";
+            this.sumDealTime.Name = "sumDealTime";
+            this.sumDealTime.OptionsColumn.AllowEdit = false;
+            this.sumDealTime.OptionsColumn.AllowFocus = false;
+            this.sumDealTime.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
+            this.sumDealTime.OptionsFilter.AllowAutoFilter = false;
+            this.sumDealTime.OptionsFilter.AllowFilter = false;
+            this.sumDealTime.Visible = true;
+            this.sumDealTime.VisibleIndex = 3;
             // 
-            // ShiShouCash
+            // sumBonus
             // 
-            this.ShiShouCash.AppearanceHeader.Options.UseTextOptions = true;
-            this.ShiShouCash.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ShiShouCash.Caption = "应收";
-            this.ShiShouCash.FieldName = "ShiShou_Cash";
-            this.ShiShouCash.Name = "ShiShouCash";
-            this.ShiShouCash.OptionsColumn.AllowEdit = false;
-            this.ShiShouCash.OptionsColumn.AllowFocus = false;
-            this.ShiShouCash.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.ShiShouCash.OptionsColumn.FixedWidth = true;
-            this.ShiShouCash.OptionsFilter.AllowAutoFilter = false;
-            this.ShiShouCash.OptionsFilter.AllowFilter = false;
-            this.ShiShouCash.Visible = true;
-            this.ShiShouCash.VisibleIndex = 5;
-            // 
-            // ShouDaocash
-            // 
-            this.ShouDaocash.AppearanceHeader.Options.UseTextOptions = true;
-            this.ShouDaocash.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.ShouDaocash.Caption = "实收";
-            this.ShouDaocash.FieldName = "ShouDao_cash";
-            this.ShouDaocash.Name = "ShouDaocash";
-            this.ShouDaocash.OptionsColumn.AllowEdit = false;
-            this.ShouDaocash.OptionsColumn.AllowFocus = false;
-            this.ShouDaocash.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.ShouDaocash.OptionsColumn.FixedWidth = true;
-            this.ShouDaocash.OptionsFilter.AllowAutoFilter = false;
-            this.ShouDaocash.OptionsFilter.AllowFilter = false;
-            this.ShouDaocash.Visible = true;
-            this.ShouDaocash.VisibleIndex = 6;
-            // 
-            // LooseCharge
-            // 
-            this.LooseCharge.AppearanceHeader.Options.UseTextOptions = true;
-            this.LooseCharge.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.LooseCharge.Caption = "找零";
-            this.LooseCharge.FieldName = "LooseCharge";
-            this.LooseCharge.Name = "LooseCharge";
-            this.LooseCharge.OptionsColumn.AllowEdit = false;
-            this.LooseCharge.OptionsColumn.AllowFocus = false;
-            this.LooseCharge.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.LooseCharge.OptionsFilter.AllowAutoFilter = false;
-            this.LooseCharge.OptionsFilter.AllowFilter = false;
-            this.LooseCharge.Visible = true;
-            this.LooseCharge.VisibleIndex = 7;
-            // 
-            // KouChuCardBalance
-            // 
-            this.KouChuCardBalance.AppearanceHeader.Options.UseTextOptions = true;
-            this.KouChuCardBalance.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.KouChuCardBalance.Caption = "扣除卡内金额";
-            this.KouChuCardBalance.FieldName = "KouChu_Card_Balance";
-            this.KouChuCardBalance.Name = "KouChuCardBalance";
-            this.KouChuCardBalance.OptionsColumn.AllowEdit = false;
-            this.KouChuCardBalance.OptionsColumn.AllowFocus = false;
-            this.KouChuCardBalance.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.KouChuCardBalance.OptionsColumn.FixedWidth = true;
-            this.KouChuCardBalance.OptionsFilter.AllowAutoFilter = false;
-            this.KouChuCardBalance.OptionsFilter.AllowFilter = false;
-            this.KouChuCardBalance.Visible = true;
-            this.KouChuCardBalance.VisibleIndex = 8;
-            this.KouChuCardBalance.Width = 80;
-            // 
-            // LeaveBalance
-            // 
-            this.LeaveBalance.AppearanceHeader.Options.UseTextOptions = true;
-            this.LeaveBalance.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.LeaveBalance.Caption = "卡内余额";
-            this.LeaveBalance.FieldName = "Leave_Balance";
-            this.LeaveBalance.Name = "LeaveBalance";
-            this.LeaveBalance.OptionsColumn.AllowEdit = false;
-            this.LeaveBalance.OptionsColumn.AllowFocus = false;
-            this.LeaveBalance.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.LeaveBalance.OptionsColumn.FixedWidth = true;
-            this.LeaveBalance.OptionsFilter.AllowAutoFilter = false;
-            this.LeaveBalance.OptionsFilter.AllowFilter = false;
-            this.LeaveBalance.Visible = true;
-            this.LeaveBalance.VisibleIndex = 9;
-            // 
-            // KouChuDealTime
-            // 
-            this.KouChuDealTime.AppearanceHeader.Options.UseTextOptions = true;
-            this.KouChuDealTime.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.KouChuDealTime.Caption = "扣除次数";
-            this.KouChuDealTime.FieldName = "KouChu_Deal_Time";
-            this.KouChuDealTime.Name = "KouChuDealTime";
-            this.KouChuDealTime.OptionsColumn.AllowEdit = false;
-            this.KouChuDealTime.OptionsColumn.AllowFocus = false;
-            this.KouChuDealTime.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
-            this.KouChuDealTime.OptionsFilter.AllowAutoFilter = false;
-            this.KouChuDealTime.OptionsFilter.AllowFilter = false;
-            this.KouChuDealTime.Visible = true;
-            this.KouChuDealTime.VisibleIndex = 11;
-            // 
-            // LeaveDealTime
-            // 
-            this.LeaveDealTime.AppearanceHeader.Options.UseTextOptions = true;
-            this.LeaveDealTime.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.LeaveDealTime.Caption = "剩余次数";
-            this.LeaveDealTime.FieldName = "Leave_Deal_Time";
-            this.LeaveDealTime.Name = "LeaveDealTime";
-            this.LeaveDealTime.OptionsColumn.AllowEdit = false;
-            this.LeaveDealTime.OptionsColumn.AllowFocus = false;
-            this.LeaveDealTime.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
-            this.LeaveDealTime.OptionsFilter.AllowAutoFilter = false;
-            this.LeaveDealTime.OptionsFilter.AllowFilter = false;
-            this.LeaveDealTime.Visible = true;
-            this.LeaveDealTime.VisibleIndex = 10;
-            // 
-            // GetBonus
-            // 
-            this.GetBonus.AppearanceHeader.Options.UseTextOptions = true;
-            this.GetBonus.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.GetBonus.Caption = "获得积分";
-            this.GetBonus.FieldName = "Get_Bonus";
-            this.GetBonus.MaxWidth = 75;
-            this.GetBonus.Name = "GetBonus";
-            this.GetBonus.OptionsColumn.AllowEdit = false;
-            this.GetBonus.OptionsColumn.AllowFocus = false;
-            this.GetBonus.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.GetBonus.OptionsColumn.FixedWidth = true;
-            this.GetBonus.OptionsFilter.AllowAutoFilter = false;
-            this.GetBonus.OptionsFilter.AllowFilter = false;
-            this.GetBonus.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
+            this.sumBonus.AppearanceHeader.Options.UseTextOptions = true;
+            this.sumBonus.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.sumBonus.Caption = "获得总积分";
+            this.sumBonus.FieldName = "sumBonus";
+            this.sumBonus.MaxWidth = 75;
+            this.sumBonus.Name = "sumBonus";
+            this.sumBonus.OptionsColumn.AllowEdit = false;
+            this.sumBonus.OptionsColumn.AllowFocus = false;
+            this.sumBonus.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.sumBonus.OptionsColumn.FixedWidth = true;
+            this.sumBonus.OptionsFilter.AllowAutoFilter = false;
+            this.sumBonus.OptionsFilter.AllowFilter = false;
+            this.sumBonus.Summary.AddRange(new DevExpress.XtraGrid.GridSummaryItem[] {
             new DevExpress.XtraGrid.GridColumnSummaryItem(DevExpress.Data.SummaryItemType.Sum, "Charge_Bonus", "{0:n0}分")});
-            this.GetBonus.Visible = true;
-            this.GetBonus.VisibleIndex = 12;
-            this.GetBonus.Width = 71;
-            // 
-            // PayType
-            // 
-            this.PayType.AppearanceHeader.Options.UseTextOptions = true;
-            this.PayType.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.PayType.Caption = "消费类型";
-            this.PayType.FieldName = "Pay_Type";
-            this.PayType.Name = "PayType";
-            this.PayType.OptionsColumn.AllowEdit = false;
-            this.PayType.OptionsColumn.AllowFocus = false;
-            this.PayType.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.PayType.OptionsColumn.FixedWidth = true;
-            this.PayType.OptionsFilter.AllowAutoFilter = false;
-            this.PayType.OptionsFilter.AllowFilter = false;
-            this.PayType.Visible = true;
-            this.PayType.VisibleIndex = 13;
-            // 
-            // Comment
-            // 
-            this.Comment.AppearanceHeader.Options.UseTextOptions = true;
-            this.Comment.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.Comment.Caption = "备  注";
-            this.Comment.FieldName = "Comment";
-            this.Comment.Name = "Comment";
-            this.Comment.OptionsColumn.AllowEdit = false;
-            this.Comment.OptionsColumn.AllowFocus = false;
-            this.Comment.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
-            this.Comment.OptionsFilter.AllowAutoFilter = false;
-            this.Comment.OptionsFilter.AllowFilter = false;
-            this.Comment.Visible = true;
-            this.Comment.VisibleIndex = 14;
-            this.Comment.Width = 200;
+            this.sumBonus.Visible = true;
+            this.sumBonus.VisibleIndex = 4;
+            this.sumBonus.Width = 71;
             // 
             // Member_ID
             // 
@@ -618,19 +457,10 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewRank;
         private DevExpress.XtraGrid.Columns.GridColumn MemberNo;
         private DevExpress.XtraGrid.Columns.GridColumn MemberName;
-        private DevExpress.XtraGrid.Columns.GridColumn DealDateTime;
-        private DevExpress.XtraGrid.Columns.GridColumn YingShouMoney;
-        private DevExpress.XtraGrid.Columns.GridColumn YouHuiMoney;
-        private DevExpress.XtraGrid.Columns.GridColumn ShiShouCash;
-        private DevExpress.XtraGrid.Columns.GridColumn ShouDaocash;
-        private DevExpress.XtraGrid.Columns.GridColumn LooseCharge;
-        private DevExpress.XtraGrid.Columns.GridColumn KouChuCardBalance;
-        private DevExpress.XtraGrid.Columns.GridColumn LeaveBalance;
-        private DevExpress.XtraGrid.Columns.GridColumn KouChuDealTime;
-        private DevExpress.XtraGrid.Columns.GridColumn LeaveDealTime;
-        private DevExpress.XtraGrid.Columns.GridColumn GetBonus;
-        private DevExpress.XtraGrid.Columns.GridColumn PayType;
-        private DevExpress.XtraGrid.Columns.GridColumn Comment;
+        private DevExpress.XtraGrid.Columns.GridColumn sumDeal;
+        private DevExpress.XtraGrid.Columns.GridColumn sumDealCash;
+        private DevExpress.XtraGrid.Columns.GridColumn sumDealTime;
+        private DevExpress.XtraGrid.Columns.GridColumn sumBonus;
         private DevExpress.XtraGrid.Columns.GridColumn Member_ID;
         private DevExpress.XtraEditors.ComboBoxEdit cmbConsumeType;
         private DevExpress.XtraEditors.LabelControl lblMemberGrade;

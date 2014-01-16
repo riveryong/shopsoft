@@ -6,10 +6,13 @@ using DevExpress.Xpo;
 using DevExpress.Xpo.DB;
 using System.Windows.Forms;
 using shopsoft.common;
+using Microsoft.Practices.EnterpriseLibrary.Data;
+using System.Configuration;
+using shopsoft.common.util;
 
 namespace shopsoft.common.DB
 {
-    public static class DBHelper
+    public class DBHelper
     {
         public static void setDBSession()
         {
@@ -37,5 +40,30 @@ namespace shopsoft.common.DB
 
 
         }
+
+        #region 通过MicrosoftEnterpriseLibrary获得数据库连接
+        public static Database getDataBase()
+        {
+            return getDataBase(null);
+        }
+
+        public static Database getDataBase(String conKey)
+        {
+            if(string.IsNullOrEmpty(conKey))
+            {
+                conKey = "sopsoftConnectionString";
+            }
+
+            string conStr = ConfigurationManager.ConnectionStrings[conKey].ConnectionString;
+            string providerStr = ConfigurationManager.ConnectionStrings[conKey].ProviderName;
+            conStr = conStr.Replace("|DataDirectory|", Application.StartupPath);
+            ConfigFileUtil.updateConnectionValue(conKey, conStr, providerStr);
+
+            Database db = DatabaseFactory.CreateDatabase();
+            return DatabaseFactory.CreateDatabase(conKey);
+            
+        }
+        #endregion
+
     }
 }

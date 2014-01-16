@@ -22,7 +22,6 @@ namespace shopsoft.main.UserControls
 		
         #region Logic信息
         private readonly MemberDealHistoryLogic dealLgic = new MemberDealHistoryLogic();
-        private readonly MemberLogic memberLogic = new MemberLogic();
         #endregion
 
 
@@ -88,7 +87,6 @@ namespace shopsoft.main.UserControls
         }
         #endregion
 
-
         /// <summary>
         /// 查询按钮点击事件
         /// </summary>
@@ -96,9 +94,10 @@ namespace shopsoft.main.UserControls
         /// <param name="e"></param>
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            XPCollection<t_Member_Deal_History> collection = dealLgic.SearchDealHistoryList(this.txtMemberNo.Text.Trim(), this.cmbConsumeType.SelectedIndex, startTime, endTime);
+            DataTable dt = dealLgic.statDealHistory(txtMemberNo.Text.Trim(), 
+                cmbConsumeType.SelectedIndex, startTime, endTime);
 
-            this.gridCtrlConsumeRank.DataSource = collection;
+            this.gridCtrlConsumeRank.DataSource = dt;
         }
 
     }

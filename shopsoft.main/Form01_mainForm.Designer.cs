@@ -390,6 +390,7 @@
             this.btnMemberConusmeStat.Id = 41;
             this.btnMemberConusmeStat.LargeGlyph = global::shopsoft.main.Properties.Resources.temp_48x48;
             this.btnMemberConusmeStat.Name = "btnMemberConusmeStat";
+            this.btnMemberConusmeStat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnMemberConusmeStat_ItemClick);
             // 
             // btnMemberChargeStat
             // 

@@ -25,14 +25,14 @@ namespace shopsoft.main.MemberManage
             string conName = "sopsoftConnectionString";
             string conStr = ConfigurationManager.ConnectionStrings[conName].ConnectionString;
             string providerStr = ConfigurationManager.ConnectionStrings[conName].ProviderName;
-            conStr = conStr.Replace("|DataDirectory|", Application.StartupPath);
+            //conStr = conStr.Replace("|DataDirectory|", Application.StartupPath);
             //if (ConfigFileUtil.updateConnectionValue(conName, conStr, providerStr))
             //{
             //    MessageBox.Show("更新数据库连接字符串成功");
             //}
                 
             Database db = DatabaseFactory.CreateDatabase();
-            String sqlStr = "select * from t_Member_Grade;";
+            String sqlStr = "select * from t_Member_Deal_Hisory;";
             DbCommand cmd = db.GetSqlStringCommand(sqlStr);
             DataSet ds = db.ExecuteDataSet(cmd);
             gridControl1.DataSource = ds.Tables[0];

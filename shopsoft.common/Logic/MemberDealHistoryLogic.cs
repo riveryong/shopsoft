@@ -6,6 +6,8 @@ using shopsoft.common.DB;
 using DevExpress.Data.Filtering;
 using DevExpress.Xpo;
 using System.Data;
+using Microsoft.Practices.EnterpriseLibrary.Data;
+using System.Data.Common;
 
 namespace shopsoft.common.Logic
 {
@@ -92,12 +94,15 @@ namespace shopsoft.common.Logic
         /// 根据条件统计会员消费数据
         /// </summary>
         /// <param name="memberId">会员编号或会员姓名</param>
+        /// <param name="payType">消费类型</param>
         /// <param name="timeStart">统计时间开始</param>
         /// <param name="timeEnd">统计时间结束</param>
         /// <returns></returns>
-        public DataTable statDealHistory(string memberId, DateTime timeStart, DateTime timeEnd)
+        public DataTable statDealHistory(string memberId, int payType, DateTime timeStart, DateTime timeEnd)
         {
-            DataTable res = null;
+            Database db = DBHelper.getDataBase();
+            DataSet dsResult = new DataSet();
+            DataTable dt = new DataTable();
             // 分类汇总sql语句
             /*SELECT Member_ID, Member_No, 
                SUM(ShouDao_cash) AS sumDealCash,
@@ -108,18 +113,44 @@ namespace shopsoft.common.Logic
                 WHERE Member_No like '%1% '
                 GROUP BY Member_ID, Member_No
                 ORDER BY SUM(ShouDao_cash);*/
-            string strSql = "SELECT Member_ID, Member_No, ";
-                   strSql += " SUM(ShouDao_cash) AS sumDealCash,";
-                   strSql += " SUM(KouChu_Deal_Time) AS sumDealTime,";
-                   strSql += " SUM(Get_Bonus) AS sumBonus,";
-                   strSql += " count(*) AS sumDeal";
-                   strSql += "FORM t_Member_Deal_Hisory";
-                   strSql += String.Format("WHERE Member_No like '%{0}% '", memberId);
-                   strSql += " GROUP BY Member_ID, Member_No  ORDER BY SUM(ShouDao_cash);";
+            string strSql = "SELECT Member_ID, Member_No, Pay_Type, ";
+            strSql += " SUM(ShouDao_cash) AS sumDealCash,";
+            strSql += " SUM(KouChu_Deal_Time) AS sumDealTime,";
+            strSql += " SUM(Get_Bonus) AS sumBonus,";
+            strSql += " count(Deal_History_ID) AS sumDeal ";
+            strSql += "FROM t_Member_Deal_Hisory ";
+            strSql += "WHERE 1=1 ";
+            if (!String.IsNullOrEmpty(memberId))
+            {
+                strSql += String.Format(" and Member_No like '%{0}% '", memberId);
+            }
+            if (null == payType || 0 == payType || 1 == payType)
+            {
+                strSql += String.Format(" and Pay_Type="+payType);
+            }
+            if (null == timeStart)
+            {
+                strSql += String.Format(" and Deal_DateTime >= "+ timeStart.ToString());
+            }
+            if (null == timeEnd)
+            {
+                strSql += String.Format(" and Deal_DateTime <= " + timeEnd.ToString());
+            }
 
+            strSql += " GROUP BY Member_ID, Member_No  ORDER BY sumDealCash;";
 
-
-            return res;
+            using (DbCommand dbCommand = db.GetSqlStringCommand(strSql))
+            {
+                dsResult = db.ExecuteDataSet(dbCommand);
+                if (dsResult != null && 
+                    dsResult.Tables.Count > 0 && 
+                    dsResult.Tables[0].Rows.Count > 0)
+                {
+                    dt = dsResult.Tables[0]; 
+                }                
+            }
+            
+            return dt;
 
         }
 
