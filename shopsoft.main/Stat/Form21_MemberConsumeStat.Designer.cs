@@ -30,9 +30,9 @@
         {
             this.TabControlStat = new DevExpress.XtraTab.XtraTabControl();
             this.tabConsumeDetail = new DevExpress.XtraTab.XtraTabPage();
+            this.uC211_ConsumeDetail1 = new shopsoft.main.UserControls.UC211_ConsumeDetail();
             this.tabConsumeList = new DevExpress.XtraTab.XtraTabPage();
             this.uC212_ConsumeRank1 = new shopsoft.main.UserControls.UC212_ConsumeRank();
-            this.uC211_ConsumeDetail1 = new shopsoft.main.UserControls.UC211_ConsumeDetail();
             ((System.ComponentModel.ISupportInitialize)(this.TabControlStat)).BeginInit();
             this.TabControlStat.SuspendLayout();
             this.tabConsumeDetail.SuspendLayout();
@@ -65,6 +65,16 @@
             this.tabConsumeDetail.Size = new System.Drawing.Size(978, 508);
             this.tabConsumeDetail.Text = "会员消费明细";
             // 
+            // uC211_ConsumeDetail1
+            // 
+            this.uC211_ConsumeDetail1.dbsession = null;
+            this.uC211_ConsumeDetail1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uC211_ConsumeDetail1.Location = new System.Drawing.Point(0, 0);
+            this.uC211_ConsumeDetail1.Margin = new System.Windows.Forms.Padding(0);
+            this.uC211_ConsumeDetail1.Name = "uC211_ConsumeDetail1";
+            this.uC211_ConsumeDetail1.Size = new System.Drawing.Size(978, 508);
+            this.uC211_ConsumeDetail1.TabIndex = 0;
+            // 
             // tabConsumeList
             // 
             this.tabConsumeList.Appearance.Header.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -84,16 +94,6 @@
             this.uC212_ConsumeRank1.Name = "uC212_ConsumeRank1";
             this.uC212_ConsumeRank1.Size = new System.Drawing.Size(978, 508);
             this.uC212_ConsumeRank1.TabIndex = 0;
-            // 
-            // uC211_ConsumeDetail1
-            // 
-            this.uC211_ConsumeDetail1.dbsession = null;
-            this.uC211_ConsumeDetail1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uC211_ConsumeDetail1.Location = new System.Drawing.Point(0, 0);
-            this.uC211_ConsumeDetail1.Margin = new System.Windows.Forms.Padding(0);
-            this.uC211_ConsumeDetail1.Name = "uC211_ConsumeDetail1";
-            this.uC211_ConsumeDetail1.Size = new System.Drawing.Size(978, 508);
-            this.uC211_ConsumeDetail1.TabIndex = 0;
             // 
             // Form21_MemberConsumeStat
             // 

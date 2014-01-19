@@ -175,15 +175,20 @@ namespace shopsoft.main.MemberManage
             memberKey = memberInfo.Member_ID.ToString();
             // 设置页面上的会员信息
             SetMemberInfo();
-
-            XPCollection<t_Member_Deal_History> dealHisColl = dealLgic.SearchDealHistoryByMemberId(memberKey);
-
-            this.gridCtrlMembers.DataSource = dealHisColl;
+            // 取得会员消费记录
+            getMemberDealHistory(memberKey);
             if (collection.Count > 1)
             {
                 // this.popupContainerControl1.Show();
                 // this.popupContainerControl1.Hide();
             }
+        }
+
+        private void getMemberDealHistory(string memberKey)
+        {
+            XPCollection<t_Member_Deal_History> dealHisColl = dealLgic.SearchDealHistoryByMemberId(memberKey);
+
+            this.gridCtrlMembers.DataSource = dealHisColl;
         }
 
 
@@ -242,6 +247,8 @@ namespace shopsoft.main.MemberManage
                 f71 = new Form071_QuickConsume(memberKey);
             }
             f71.ShowDialog();
+            getMemberDealHistory(memberKey);
+
         }
         #endregion
 
@@ -267,6 +274,7 @@ namespace shopsoft.main.MemberManage
                 f72 = new Form072_TimesConsume(memberKey);
             }
             f72.ShowDialog();
+            getMemberDealHistory(memberKey);
         }
         #endregion
 

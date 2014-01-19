@@ -83,6 +83,7 @@
             this.labelControl20 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl21 = new DevExpress.XtraEditors.LabelControl();
             this.chkSavePrint = new DevExpress.XtraEditors.CheckEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.DBSession)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnConsumeSum.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnYingShou.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnShiShou.Properties)).BeginInit();
@@ -232,9 +233,9 @@
             this.lblLooseChange.Location = new System.Drawing.Point(383, 287);
             this.lblLooseChange.Margin = new System.Windows.Forms.Padding(5);
             this.lblLooseChange.Name = "lblLooseChange";
-            this.lblLooseChange.Size = new System.Drawing.Size(13, 29);
+            this.lblLooseChange.Size = new System.Drawing.Size(37, 29);
             this.lblLooseChange.TabIndex = 45;
-            this.lblLooseChange.Text = "0";
+            this.lblLooseChange.Text = "0元";
             // 
             // labelControl13
             // 
@@ -805,6 +806,7 @@
             this.Text = "快速消费";
             this.Load += new System.EventHandler(this.Form071_QuickConsume_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form071_QuickConsume_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.DBSession)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnConsumeSum.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnYingShou.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spnShiShou.Properties)).EndInit();

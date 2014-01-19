@@ -109,12 +109,7 @@ namespace shopsoft.main.MemberManage
             this.zhekou = this.memberInfo.Member_Grade_ID.Discount_Percent;
 
             // 查询消费备注项目
-            chklistConsumItems.DataSource = contentLogic.SearchConsumItems();
-            if (chklistConsumItems.DataSource != null)
-            {
-                chklistConsumItems.DisplayMember = "Content";
-                chklistConsumItems.ValueMember = "Content_ID";
-            }
+            getConsumItemList();
 
             // 查询导购列表
             chklistGuide.DataSource = shopLogic.GetGuideList();
@@ -124,6 +119,16 @@ namespace shopsoft.main.MemberManage
                 chklistGuide.ValueMember = "Guide_No";
             }
 
+        }
+
+        private void getConsumItemList()
+        {
+            chklistConsumItems.DataSource = contentLogic.SearchConsumItems();
+            if (chklistConsumItems.DataSource != null)
+            {
+                chklistConsumItems.DisplayMember = "Content";
+                chklistConsumItems.ValueMember = "Content_ID";
+            }
         }
         #endregion
 
@@ -137,6 +142,7 @@ namespace shopsoft.main.MemberManage
         {
             Form079_ConsumeItem itemDialg = new Form079_ConsumeItem("", 1);
             itemDialg.ShowDialog();
+            getConsumItemList();
             return;
         }
 
@@ -282,7 +288,11 @@ namespace shopsoft.main.MemberManage
 
             // 计算找零
             if (this.spnShiShou.Value != 0)
-                this.lblLooseChange.Text = Convert.ToString(this.spnShiShou.Value - this.spnYingShou.Value);
+            {
+                this.zhaoling = Convert.ToDouble(this.spnShiShou.Value - this.spnYingShou.Value);
+                this.lblLooseChange.Text = this.zhaoling.ToString();
+            }
+                
         }
         #endregion
 
@@ -292,7 +302,8 @@ namespace shopsoft.main.MemberManage
             // 计算找零
             if (this.spnShiShou.Value != 0)
             {
-                this.lblLooseChange.Text = Convert.ToString(this.spnShiShou.Value - this.spnYingShou.Value) + "元";
+                this.zhaoling = Convert.ToDouble(this.spnShiShou.Value - this.spnYingShou.Value);
+                this.lblLooseChange.Text = this.zhaoling.ToString() + "元";
             }
             else
             {
@@ -386,7 +397,7 @@ namespace shopsoft.main.MemberManage
                 // 应收金额
                 this.memberDealHis.YingShou_Money = Convert.ToDouble(this.spnConsumeSum.Value);
                 // 折后金额
-                this.memberDealHis.ZheHou_Money = Convert.ToDouble(this.lblzhehou);
+                this.memberDealHis.ZheHou_Money = Convert.ToDouble(this.lblzhehou.Text);
 
                 // 应收现金
                 this.memberDealHis.ShiShou_Cash = Convert.ToDouble(this.spnYingShou.Value);
@@ -395,7 +406,7 @@ namespace shopsoft.main.MemberManage
                 this.memberDealHis.ShouDao_cash = Convert.ToDouble(this.spnShiShou.Value);
 
                 // 找零
-                this.memberDealHis.LooseCharge = Convert.ToDouble(this.lblLooseChange);
+                this.memberDealHis.LooseCharge = this.zhaoling;
 
                 // 扣卡金额
                 this.memberDealHis.KouChu_Card_Balance = Convert.ToDouble(this.spnKouka.Value);

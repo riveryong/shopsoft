@@ -32,7 +32,7 @@ namespace shopsoft.main.MemberManage
             //}
                 
             Database db = DatabaseFactory.CreateDatabase();
-            String sqlStr = "select * from t_Member_Deal_Hisory;";
+            String sqlStr = "select * from t_Member_Deal_History;";
             DbCommand cmd = db.GetSqlStringCommand(sqlStr);
             DataSet ds = db.ExecuteDataSet(cmd);
             gridControl1.DataSource = ds.Tables[0];

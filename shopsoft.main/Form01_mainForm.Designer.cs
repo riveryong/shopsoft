@@ -73,7 +73,6 @@
             this.mainPanel = new DevExpress.XtraEditors.PanelControl();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             logout = new DevExpress.XtraBars.BarButtonItem();
-            ((System.ComponentModel.ISupportInitialize)(this.DBSession)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonCtrl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainPanel)).BeginInit();
             this.SuspendLayout();
@@ -535,7 +534,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "商普店铺管理系统(会员销售版)  ";
             this.Load += new System.EventHandler(this.main_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DBSession)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonCtrl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mainPanel)).EndInit();
             this.ResumeLayout(false);
